@@ -1,12 +1,8 @@
-package com.xmastree.draw;
+package com.xmastree;
 
-import static com.xmastree.CharacterPrinter.printCharacter;
-import static com.xmastree.CharacterPrinter.printTreeCharacter;
-
-public class DrawLeftXmasTree implements DrawXmasTreeStrategy {
+public class DrawRightXmasTree implements DrawXmasTreeStrategy {
 
     public void drawXmasTree(int size, int segments) {
-
         for (int i = 0; i < size; i++) {
             drawLine(size, segments, i);
         }
@@ -19,11 +15,12 @@ public class DrawLeftXmasTree implements DrawXmasTreeStrategy {
         for (int j = 0; j < segments; j++) {
             drawBranch(size, i);
         }
-        printCharacter("\n", 1);
+        CharacterPrinter.printCharacter("\n", 1);
     }
 
-    private static void drawBranch(int size, int i) {
-        printCharacter(" ", size - i);
-        printTreeCharacter("*", i);
+    private void drawBranch(int size, int i) {
+        CharacterPrinter.printTreeCharacter("*", i);
+        CharacterPrinter.printCharacter(" ", size - i);
+
     }
 }

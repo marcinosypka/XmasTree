@@ -1,6 +1,4 @@
-package com.xmastree.draw;
-
-import com.xmastree.draw.*;
+package com.xmastree;
 
 import java.util.*;
 
