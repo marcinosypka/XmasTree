@@ -1,6 +1,8 @@
 package com.xmastree;
 
-public class XmasTree {
+import com.xmastree.draw.XmasTreeDrawer;
+
+public class Main {
 
     public static void main(String[] args) {
 

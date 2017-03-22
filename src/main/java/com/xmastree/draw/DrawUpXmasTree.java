@@ -1,10 +1,10 @@
-package com.xmastree;
+package com.xmastree.draw;
 
 import static com.xmastree.CharacterPrinter.printCharacter;
 import static com.xmastree.CharacterPrinter.printTreeCharacter;
 
 
-public class DrawUpXmasTreeStrategy implements DrawXmasTreeStrategy {
+public class DrawUpXmasTree implements DrawXmasTreeStrategy {
 
     public void drawXmasTree(int size, int segments) {
         for (int j = 0; j < segments; j++) {

@@ -1,6 +1,8 @@
-package com.xmastree;
+package com.xmastree.draw;
 
-public class DrawRightXmasTreeStrategy implements DrawXmasTreeStrategy {
+import com.xmastree.CharacterPrinter;
+
+public class DrawRightXmasTree implements DrawXmasTreeStrategy {
 
     public void drawXmasTree(int size, int segments) {
         for (int i = 0; i < size; i++) {

@@ -1,4 +1,6 @@
-package com.xmastree;
+package com.xmastree.draw;
+
+import com.xmastree.draw.*;
 
 import java.util.*;
 
@@ -8,10 +10,10 @@ public class XmasTreeDrawer {
 
     public XmasTreeDrawer() {
         drawingStrategies = new HashMap<>();
-        drawingStrategies.put("LEWO", new DrawLeftXmasTreeStrategy());
-        drawingStrategies.put("PRAWO", new DrawRightXmasTreeStrategy());
-        drawingStrategies.put("GORA", new DrawUpXmasTreeStrategy());
-        drawingStrategies.put("DOL", new DrawDownXmasTreeStrategy());
+        drawingStrategies.put("LEWO", new DrawLeftXmasTree());
+        drawingStrategies.put("PRAWO", new DrawRightXmasTree());
+        drawingStrategies.put("GORA", new DrawUpXmasTree());
+        drawingStrategies.put("DOL", new DrawDownXmasTree());
     }
 
     public void draw() {
@@ -37,7 +39,10 @@ public class XmasTreeDrawer {
             } catch (NullPointerException npe) {
                 System.out.println("Nie ma takiego typu choinki, sprobuj ponownie");
             } catch (NoSuchElementException nsee) {
+                System.out.println("Wprowadzono znak EOT, koniec działania programu.");
                 System.exit(1);
+            } catch (Exception e) {
+                System.out.println(e.getClass());
             }
         }
     }
@@ -70,7 +75,10 @@ public class XmasTreeDrawer {
             } catch (NumberFormatException nfe) {
                 System.out.println("Podana wartość nie jest liczbą !");
             } catch (NoSuchElementException nsee) {
+                System.out.println("Wprowadzono znak EOT, koniec działania programu.");
                 System.exit(1);
+            } catch (Exception e) {
+                System.out.println(e.getClass());
             }
         }
     }
